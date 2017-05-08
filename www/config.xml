@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<widget xmlns         = "http://www.w3.org/ns/widgets"
+        xmlns:gap     = "http://phonegap.com/ns/1.0"
+        id            = "com.karinamcgourty.todoapp"
+        versionCode   = "1"
+        version       = "1.0.0" >
+
+    <name>YourTODO</name>
+
+    <description>
+        A simple todo list application.
+    </description>
+
+    <author href="http://karinamcgourty.london/" email="karina.mcgourty@digitalskillsacademy.me">
+        Karina McGourty
+    </author>
+            
+    <preference name="orientation" value="portrait" />        
+
+    <icon src="images/icon.png" />
+
+</widget>

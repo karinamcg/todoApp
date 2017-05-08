@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html data-ng-app="todoApp">
+    <head>
+       <!--
+        * Author: Karina McGourty
+
+        * Assignment: BScH Mobile Development, Digital Skills Academy
+
+        * Student ID: STU-00001261 * Date : 2017/04/10
+
+        * Ref: 
+       -->
+        <title>My Task List</title>   
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body data-ng-controller="todoController">
+        <!-- Main Page -->
+        <div id="top-nav">
+            <h1>My Tasks</h1>
+            <h4>You have <span id="todo-total">{{todoTotal()}}</span> tasks on your list</h4>
+        </div>
+        
+        <!-- Jump to form fields to add task-->
+        <div id="new-task">
+        <a href="#add-new-task">+ Add a new task</a>
+        </div>
+        
+        <!-- Main content for the todo/task list -->
+        <div data-ng-repeat="aTodo in tasks track by $index">
+            <div id="main-list" class="{{aTodo.priority}} done-{{aTodo.status}}">
+                <input type="checkbox" id="todo-checkbox" data-ng-click="changeStatus($index)" data-ng-model="aTodo.status">
+                <ul>
+                    <li id="todo-title">{{aTodo.todo}}</li>
+                    <li id="todo-description">{{aTodo.description}}</li>
+                    <li id="todo-date">Due Date: <span id="todo-date-highlight">{{aTodo.date}}</span></li>
+                    <li id="todo-priority">{{aTodo.priority}}</li>
+                </ul>
+                <!-- Delete Task -->
+                <a href="" data-ng-click="deleteTask(aTodo)">Remove From Task List</a>
+            </div>
+        </div>
+        
+        <!-- Add a new todo/task -->
+        <!-- Form fields for new todo items -->
+        <form data-ng-submit="todoAdd()" class="new-todo-wrapper">
+            <h2>I need to...</h2>
+            <label for="task">Task Title</label>
+            <input type="text" id="task" data-ng-model="newTodo" size="50" placeholder="I need to...">
+            
+            <label for="description">Description</label>
+            <textarea rows="3" cols="35" id="description" data-ng-model="newDesc" size="50" placeholder="Task description..."></textarea>
+            
+            <label for="priority">Priority</label>
+            <select id="priority" data-ng-model="newPriority" data-ng-options="priority.level for priority in newPriorityLevel">
+                <option value="">Choose Priority Level</option>
+            </select>
+            
+            <label for="date">Date Due</label>
+            <input type="text" id="date" data-ng-model="newDate" size="50" placeholder="dd/mm/yyyy">
+        
+            <input type="submit" value="Create" id="submit">
+        </form>
+        
+         <a name="add-new-task"></a>
+        <!-- Load JS at bottom to let page load first -->
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js" type="text/javascript"></script>-->
+        <script src="js/angular.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <!-- Required for Phonegap Build -->
+        <script src="phonegap.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,189 @@
+/******************************
+* Author: Karina McGourty
+
+* Assignment: BScH Mobile Development, Digital Skills Academy
+
+* Student ID: STU-00001261 * Date : 2017/04/10
+
+* Ref: 
+******************************/
+body {
+    font-family: 'Exo', sans-serif;
+    background: url(../images/galaxy3.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+h2 {
+    text-align: center;
+}
+
+#top-nav {
+    background: purple; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #8a39eb, #e8838d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #8a39eb, #e8838d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #8a39eb, #e8838d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #8a39eb, #e8838d); /* Standard syntax */
+    text-align: center;
+    opacity: 0.9;
+    border: 2px solid purple;
+    color:#fff;
+}
+
+#main-list {
+    background-color: #eee;
+}
+
+#main-list ul li {
+    list-style: none;
+}
+
+#main-list ul {
+    padding:0;
+}
+
+#main-list ul li.ng-binding.ng-scope {
+    padding:1% 0 1% 4%;
+}
+
+.new-todo-wrapper {
+    background-color: #eee;
+    padding:4%;
+    opacity:0.9;
+    margin-top:4%;
+    border:2px solid purple;
+}
+
+input, label {
+    display:block;
+}
+
+#task, #description, #priority, #date {
+    margin-bottom:4%;
+    font-size:15px;
+    width:96%;
+    /* To change font of description box placeholder */
+    font-family: 'Exo', sans-serif;
+}
+
+#submit {
+    font-size:16px;
+    border:1px solid purple;
+    color:#fff;
+    padding:1%;
+    text-transform: uppercase;
+    background: purple; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #8a39eb, #e8838d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #8a39eb, #e8838d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #8a39eb, #e8838d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #8a39eb, #e8838d); /* Standard syntax */
+}
+
+#main-list.Urgent {
+/*    background:#e00;*/
+    background:#000;
+    color:#fff;
+    padding:5%;
+    margin-top:3%;
+    opacity:0.8;
+    border:4px solid #e00;
+}
+
+#main-list.High {
+/*    background:#700;*/
+    background:#000;
+    color:#fff;
+    padding:5%;
+    margin-top:3%;
+    opacity:0.8;
+    border:4px solid #700;
+}
+
+#main-list.Medium {
+/*    background:#fec900;*/
+    background:#000;
+    color:#fff;
+    padding:5%;
+    margin-top:3%;
+    opacity:0.8;
+    border:4px solid #fec900;
+}
+
+#main-list.Low {
+/*    background:#61d125;*/
+    background:#000;
+    color:#fff;
+    padding:5%;
+    margin-top:3%;
+    opacity:0.8;
+    border:4px solid #61d125;
+}
+
+#main-list.done-true {
+    color:grey;
+    font-style:italic;
+    text-decoration:line-through;
+}
+
+#main-list.done-true a {
+    color:#fff;
+    font-style:normal;
+    text-decoration:none;
+}
+
+#main-list a {
+    color:#fff;
+    text-decoration:none;
+    background:purple;
+    border-radius:9px;
+    padding:2%;
+}
+
+#new-task a {
+    text-decoration:none;
+    color:#000;
+}
+
+#new-task {
+    background:#fff;
+    padding:2%;
+    border: 2px solid purple;
+    margin-top:2%;
+    opacity:0.9;
+}
+
+#todo-title {
+    font-size:24px;
+    font-weight:bold;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1%;
+}
+
+#todo-description {
+    margin-top:5%;
+    font-style:italic;
+}
+
+#todo-date {
+    margin-top:5%;
+}
+
+#todo-date-highlight {
+    text-decoration:underline;
+}
+
+#todo-priority {
+    background:#fff;
+    border-radius: 5px;
+    color:#000;
+    margin-top: 2%;
+    text-align: center;
+    width: 30%;
+}
+
+#todo-total {
+    font-size:21px;
+}
+
+#todo-checkbox {
+   float:right;
+}
